@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R.D.C.S CYBER TOOL HUB</title>
+
+<style>
+body{
+  margin:0;
+  background:#0b0f14;
+  font-family: monospace;
+  color:#00ff99;
+}
+
+header{
+  background:#000;
+  padding:15px;
+  text-align:center;
+  border-bottom:2px solid #00ff99;
+}
+
+header h1{
+  margin:0;
+  font-size:22px;
+  letter-spacing:2px;
+}
+
+.container{
+  padding:20px;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:20px;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink{
+  50%{opacity:0.5;}
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:15px;
+}
+
+.box{
+  background:#111;
+  border:2px solid #00ff99;
+  border-radius:15px;
+  padding:20px;
+  text-align:center;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.box:hover{
+  background:#00ff9922;
+  transform:scale(1.05);
+}
+
+.box img{
+  width:60px;
+  height:60px;
+  margin-bottom:10px;
+}
+
+.box span{
+  display:block;
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+footer{
+  text-align:center;
+  padding:15px;
+  font-size:12px;
+  color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>R.D.C.S CYBER SECURITY</h1>
+</header>
+
+<div class="container">
+
+  <div class="title">
+    >> SAFE CYBER TOOL HUB <<
+  </div>
+
+  <div class="grid">
+
+    <div class="box">
+      <img src="https://img.icons8.com/fluency/96/security-checked.png">
+      <span>SECURITY TEST</span>
+    </div>
+
+    <div class="box">
+      <img src="https://img.icons8.com/fluency/96/source-code.png">
+      <span>CODE LAB</span>
+    </div>
+
+    <div class="box">
+      <img src="https://img.icons8.com/fluency/96/qr-code.png">
+      <span>QR GENERATOR</span>
+    </div>
+
+    <div class="box">
+      <img src="https://img.icons8.com/fluency/96/artificial-intelligence.png">
+      <span>AI TOOLS</span>
+    </div>
+
+    <div class="box">
+      <img src="https://img.icons8.com/fluency/96/cloud.png">
+      <span>CLOUD TEST</span>
+    </div>
+
+    <div class="box">
+      <img src="https://img.icons8.com/fluency/96/lock.png">
+      <span>PRIVACY CHECK</span>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © R.D.C.S CYBER | Educational Purpose Only
+</footer>
+
+<!-- SOUND -->
+<audio id="beep" src="beep.mp3"></audio>
+<audio id="typeSound" src="type.mp3"></audio>
+<audio id="submitSound" src="submit.mp3"></audio>
+
+<script>
+window.onload = ()=>{
+  document.getElementById("beep").play().catch(()=>{});
+};
+
+document.querySelectorAll(".box").forEach(box=>{
+  box.addEventListener("click", ()=>{
+    let s = document.getElementById("submitSound");
+    s.currentTime = 0;
+    s.play().catch(()=>{});
+    alert("This feature will be added soon.");
+  });
+});
+
+document.addEventListener("keydown", ()=>{
+  let t = document.getElementById("typeSound");
+  t.currentTime = 0;
+  t.play().catch(()=>{});
+});
+</script>
+
+</body>
+</html>
